@@ -1,0 +1,316 @@
+@font-face {
+  font-family: 'SUITE-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HakgyoansimBadasseugiTTF-L';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimBadasseugiTTF-L.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  flex: 1;
+  overflow-y: auto;
+}
+      
+.basic {
+  background-color: var(--primary-color);
+  padding: 1px;
+  text-align: center;
+  color: var(--text-white);
+  width: 100%;
+  position: relative;
+  height: 50px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+h1 {
+  font-family: 'HakgyoansimBadasseugiTTF-L';
+  text-align: center;
+}
+
+h2, h3, h4 {
+  font-family: "SUITE-Regular";
+  position: absoulte;
+  text-align: center;
+}
+
+iframe {
+  flex: 2 0 300px; 
+  padding: 0;
+  min-width: 250px;
+  border: none;
+}
+
+video {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  object-fit: cover;
+  display: block;
+  text-align: center;
+}
+
+.basics_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: var(--background-white);
+  width: auto;
+  min-height: 75vh;
+  box-sizing: border-box;
+  border: 10px solid var(--primary-color);
+  padding: 10px;
+  margin: 5px 20px 20px 20px;
+  gap: 20px;
+}
+
+.inside_box {
+  flex: 8 0 300px;
+  min-width: 250px;
+}
+
+p {
+  font-family: "SUITE-Regular";
+  position:absoulte;
+  line-height: 1.2;
+}
+
+details {
+  font-family: "SUITE-Regular";
+  position:absoulte;
+  line-height: 1.8;
+}
+
+.nested1 {
+  margin-left: 20px; 
+}
+
+.nested2 {
+  margin-left: 40px; 
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+  gap: 10px;
+}
+
+button {
+  font-family: "SUITE-Regular";
+  position:absoulte;
+  padding: 10px 20px;
+  background-color: var(--primary-light);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 메신저 말풍선*/
+.message {
+  max-width: 80%;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border-radius: 18px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* 받은 메시지 (왼쪽) */
+.received {
+  background-color: var(--message-received-bg);
+  color: var(--text-black);
+  border-bottom-left-radius: 5px;
+  align-self: flex-start;
+}
+
+/* 보낸 메시지 (오른쪽) */
+.sent {
+  background-color: var(--message-sent-bg);
+  color: var(--text-black);
+  border-bottom-right-radius: 5px;
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+/* 말풍선 컨테이너 (Flexbox 정렬용) */
+.message-row {
+  display: flex;
+  margin-bottom: 6px;
+}
+
+/* 갤러리 */
+div.gallery {
+  border: 1px solid var(--border-color);
+}
+
+div.gallery:hover {
+  border: 1px solid var(--border-hover);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 버튼 컨테이너 */
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.button-container-right {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+
+/* 원형 버튼 스타일 */
+.or-btn {
+  font-family: "SUITE-Regular";
+  position:absoulte;
+  padding: 10px 10px;
+  background-color: var(--primary-light);
+  color: var(--text-black);
+  border: none;
+  border-radius: 30px;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.or-btn:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+.or-btn:active {
+  transform: scale(0.95);
+}
+
+.media-container {
+  flex: 2 0 300px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+iframe {
+  flex: none;
+  width: 100%;
+  height: 300px;
+  padding: 0;
+  border: none;
+}
+
+/* basics_box 안의 동영상 */
+.media-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.or-btn a {
+  color: var(--text-black);
+  text-decoration: none;
+}
+
+.or-btn a:visited {
+  color: var(--text-black);
+}
+
+.or-btn a:hover {
+  color: var(--text-black);
+}
+
+.or-btn a:active {
+  color: var(--text-black);
+}
+
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+.basics_box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  iframe, .inside_box {
+    width: 100%;
+  }
+
+  /* media-container를 완전히 해체 */
+  .media-container {
+    display: contents !important;
+    flex: none !important;
+  }
+
+  /* 이제 iframe과 video가 독립적으로 순서 조정 가능 */
+  .media-container iframe {
+    order: -1;
+    width: 100%;
+  }
+
+  .inside_box {
+    order: 0;
+  }
+
+  .media-container video {
+    order: 1;
+    width: 100%;
+  }
+
+
+}
