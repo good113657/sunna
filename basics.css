@@ -1,17 +1,22 @@
-@font-face {
-  font-family: 'SUITE-Regular';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
+/* ========================================
+   색상 변수 정의 (여기서 색상 수정)
+   ======================================== */
+:root {
+  /* 메인 색상 */
+  --main-color: pink;
+  --main-light-color: #ffdde3;
+  
+  /* 텍스트 색상 */
+  --text-white: white;
+  --text-black: black;
+  
+  /* 배경 색상 */
+  --bg-white: white;
 }
 
-@font-face {
-  font-family: 'HakgyoansimBadasseugiTTF-L';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimBadasseugiTTF-L.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
+/* ========================================
+   기본 스타일
+   ======================================== */
 body {
   margin: 0;
 }
@@ -22,7 +27,7 @@ body {
 }
       
 .basic {
-  background-color: var(--primary-color);
+  background-color: var(--main-color);
   padding: 1px;
   text-align: center;
   color: var(--text-white);
@@ -39,6 +44,26 @@ body {
   display: block;
 }
 
+/* ========================================
+   폰트 설정
+   ======================================== */
+@font-face {
+  font-family: 'SUITE-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HakgyoansimBadasseugiTTF-L';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimBadasseugiTTF-L.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ========================================
+   텍스트 스타일
+   ======================================== */
 h1 {
   font-family: 'HakgyoansimBadasseugiTTF-L';
   text-align: center;
@@ -50,6 +75,21 @@ h2, h3, h4 {
   text-align: center;
 }
 
+p {
+  font-family: "SUITE-Regular";
+  position:absoulte;
+  line-height: 1.2;
+}
+
+details {
+  font-family: "SUITE-Regular";
+  position:absoulte;
+  line-height: 1.8;
+}
+
+/* ========================================
+   미디어 요소
+   ======================================== */
 iframe {
   flex: 2 0 300px; 
   padding: 0;
@@ -66,18 +106,21 @@ video {
   text-align: center;
 }
 
+/* ========================================
+   박스 레이아웃
+   ======================================== */
 .basics_box {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   border-radius: 25px;
-  background-color: var(--background-white);
+  background-color: var(--bg-white);
   width: auto;
   min-height: 75vh;
   box-sizing: border-box;
-  border: 10px solid var(--primary-color);
+  border: 10px solid var(--main-color);
   padding: 10px;
-  margin: 5px 20px 20px 20px;
+  margin: 20px;
   gap: 20px;
 }
 
@@ -86,18 +129,9 @@ video {
   min-width: 250px;
 }
 
-p {
-  font-family: "SUITE-Regular";
-  position:absoulte;
-  line-height: 1.2;
-}
-
-details {
-  font-family: "SUITE-Regular";
-  position:absoulte;
-  line-height: 1.8;
-}
-
+/* ========================================
+   중첩 요소
+   ======================================== */
 .nested1 {
   margin-left: 20px; 
 }
@@ -106,72 +140,9 @@ details {
   margin-left: 40px; 
 }
 
-.button-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 20px;
-  gap: 10px;
-}
-
-button {
-  font-family: "SUITE-Regular";
-  position:absoulte;
-  padding: 10px 20px;
-  background-color: var(--primary-light);
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* 메신저 말풍선*/
-.message {
-  max-width: 80%;
-  padding: 10px 14px;
-  margin-bottom: 12px;
-  border-radius: 18px;
-  line-height: 1.4;
-  word-wrap: break-word;
-}
-
-/* 받은 메시지 (왼쪽) */
-.received {
-  background-color: var(--message-received-bg);
-  color: var(--text-black);
-  border-bottom-left-radius: 5px;
-  align-self: flex-start;
-}
-
-/* 보낸 메시지 (오른쪽) */
-.sent {
-  background-color: var(--message-sent-bg);
-  color: var(--text-black);
-  border-bottom-right-radius: 5px;
-  margin-left: auto;
-  align-self: flex-end;
-}
-
-/* 말풍선 컨테이너 (Flexbox 정렬용) */
-.message-row {
-  display: flex;
-  margin-bottom: 6px;
-}
-
-/* 갤러리 */
-div.gallery {
-  border: 1px solid var(--border-color);
-}
-
-div.gallery:hover {
-  border: 1px solid var(--border-hover);
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
+/* ========================================
+   반응형 갤러리
+   ======================================== */
 * {
   box-sizing: border-box;
 }
@@ -188,66 +159,29 @@ div.gallery img {
   clear: both;
 }
 
-/* 버튼 컨테이너 */
+/* ========================================
+   버튼 스타일
+   ======================================== */
+button {
+  font-family: "SUITE-Regular";
+  position:absoulte;
+  padding: 10px 20px;
+  background-color: var(--main-light-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .button-container {
   display: flex;
   gap: 10px;
 }
 
-.button-container-right {
+.button-wrapper {
   display: flex;
-  gap: 10px;
-  margin-left: auto;
-}
-
-
-/* 원형 버튼 스타일 */
-.or-btn {
-  font-family: "SUITE-Regular";
-  position:absoulte;
-  padding: 10px 10px;
-  background-color: var(--primary-light);
-  color: var(--text-black);
-  border: none;
-  border-radius: 30px;
-  font-size: 12px;
-  cursor: pointer;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-}
-
-.or-btn:hover {
-  background-color: var(--primary-hover);
-  transform: scale(1.05);
-}
-
-.or-btn:active {
-  transform: scale(0.95);
-}
-
-.media-container {
-  flex: 2 0 300px;
-  min-width: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-iframe {
-  flex: none;
-  width: 100%;
-  height: 300px;
-  padding: 0;
-  border: none;
-}
-
-/* basics_box 안의 동영상 */
-.media-container video {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .or-btn a {
@@ -255,18 +189,19 @@ iframe {
   text-decoration: none;
 }
 
-.or-btn a:visited {
-  color: var(--text-black);
-}
+/* ========================================
+   반응형 미디어 쿼리
+   ======================================== */
+@media (max-width: 600px) {
+  .basics_box {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.or-btn a:hover {
-  color: var(--text-black);
+  iframe, .inside_box {
+    width: 100%;
+  }
 }
-
-.or-btn a:active {
-  color: var(--text-black);
-}
-
 
 @media only screen and (max-width: 700px) {
   .responsive {
@@ -279,38 +214,4 @@ iframe {
   .responsive {
     width: 100%;
   }
-}
-
-@media (max-width: 600px) {
-.basics_box {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  iframe, .inside_box {
-    width: 100%;
-  }
-
-  /* media-container를 완전히 해체 */
-  .media-container {
-    display: contents !important;
-    flex: none !important;
-  }
-
-  /* 이제 iframe과 video가 독립적으로 순서 조정 가능 */
-  .media-container iframe {
-    order: -1;
-    width: 100%;
-  }
-
-  .inside_box {
-    order: 0;
-  }
-
-  .media-container video {
-    order: 1;
-    width: 100%;
-  }
-
-
 }
